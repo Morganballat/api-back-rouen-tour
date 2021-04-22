@@ -6,7 +6,7 @@ const parksMapper = {
 	allParks: async () => {
 		const result = await db.query(`
      SELECT * 
-     FROM all_parks ORDER BY rating;
+     FROM parks ORDER BY rating;
      `);
 		return result.rows.map((data) => new Parks(data));
 	},
